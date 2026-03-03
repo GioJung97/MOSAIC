@@ -2157,7 +2157,9 @@ export function App() {
               style={{
                 marginBottom: 20,
                 display: 'flex',
-                alignItems: 'flex-start'
+                alignItems: 'flex-start',
+                justifyContent: 'space-between',
+                gap: 12
               }}>
 
                   <div>
@@ -2206,6 +2208,24 @@ export function App() {
                   )}
                     </div>
                   </div>
+                  {userRole === 'teacher' &&
+                <button
+                  onClick={() => setActiveTab('gallery')}
+                  style={{
+                    padding: '10px 14px',
+                    background: '#6366F1',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: 8,
+                    fontSize: 13,
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    flexShrink: 0
+                  }}>
+
+                      View Comic
+                    </button>
+                }
                 </div>
 
                 {/* Ordered items list */}
